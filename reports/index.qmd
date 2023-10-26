@@ -96,7 +96,7 @@ find_hatching_beach <- function(site, date) {
               earliest = min(date)) %>% # find the earliest date
     filter(n == max(n), # find the site with the most observations
            earliest == min(date)) %>% # find the earliest date based on most observations
-    select(site, n, earliest) # takes the site parameter as input and matches it with most observations and earliest date
+    select(site, n, earliest) # takes the site and matches it with most observations and earliest date
 return(result$site) # returns the site with the most observations and the earliest date
   }
 
